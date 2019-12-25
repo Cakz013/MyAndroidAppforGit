@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import cesarkemper.com.myapplicationforgit.R;
 
 public class HomeActivity extends AppCompatActivity {
-    Button btnLogOut, btnDagger;
+    Button btnLogOut, btnDagger, FotosBtn;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
@@ -37,6 +37,16 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent inttoDagger = new Intent(HomeActivity.this, DaggerActivity.class);
                 startActivity(inttoDagger);
+            }
+        });
+
+        FotosBtn = findViewById(R.id.FotosBtn);
+
+        FotosBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent inttoFotos = new Intent(HomeActivity.this, AlbumActivity.class);
+                startActivity(inttoFotos);
             }
         });
     }

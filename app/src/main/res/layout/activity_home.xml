@@ -38,44 +38,31 @@
         android:id="@+id/DaggerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="44dp"
         android:text="Dagger"
         app:layout_constraintBottom_toTopOf="@+id/LogOut"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/FotosBtn"
         app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.493" />
+        app:layout_constraintVertical_bias="0.671" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/FotosBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="112dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginBottom="44dp"
         android:text="Retrofit"
         app:layout_constraintBottom_toTopOf="@+id/LogOut"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/DaggerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="8dp"
-        android:text="Fotos"
-        app:layout_constraintBottom_toTopOf="@+id/LogOut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/DaggerBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.671" />
+
+
 </android.support.constraint.ConstraintLayout>
