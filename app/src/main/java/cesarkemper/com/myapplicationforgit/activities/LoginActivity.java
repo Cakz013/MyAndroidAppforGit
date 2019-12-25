@@ -1,4 +1,4 @@
-package cesarkemper.com.myapplicationforgit;
+package cesarkemper.com.myapplicationforgit.activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -15,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import cesarkemper.com.myapplicationforgit.R;
 
 public class LoginActivity extends AppCompatActivity {
     public EditText userId, password;
@@ -53,25 +55,22 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String user = userId.getText().toString();
                 String pwd = password.getText().toString();
-                if (user.isEmpty()){
-                    userId.setError("Please enter user id");
-                    userId.requestFocus();
+                if (user.isEmpty() && pwd.isEmpty()){
+                    Toast.makeText(LoginActivity.this,"Los Campos estan vacios!", Toast.LENGTH_LONG).show();
                 }
-                if (user.isEmpty()){
-                    userId.setError("Please enter user id");
+                else if (user.isEmpty()) {
+                    userId.setError("Ingrese su usuario");
                     userId.requestFocus();
                 }
                 else if (pwd.isEmpty()){
-                    password.setError("Please enter your password");
+                    password.setError("Ingrese su contraseña");
                     password.requestFocus();
-                }else if (user.isEmpty() && pwd.isEmpty()){
-                    Toast.makeText(LoginActivity.this,"Fields are Empty!", Toast.LENGTH_LONG).show();
                 }else if (!(user.isEmpty() && pwd.isEmpty())){
                     mFireBaseAuth.signInWithEmailAndPassword(user, pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()){
-                            Toast.makeText(LoginActivity.this,"Login Error, Please Login Again!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this,"Error al ingresar intentelo de vuelta!", Toast.LENGTH_LONG).show();
                         }else{
                             Intent intToHome = new Intent(LoginActivity.this, HomeActivity.class);
                             startActivity(intToHome);
@@ -79,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
                 }else{
-                    Toast.makeText(LoginActivity.this,"Error Occurred!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"Ocurrio un error!", Toast.LENGTH_LONG).show();
                 }
             }
         });

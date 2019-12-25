@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
 
     <EditText
@@ -17,7 +17,7 @@
         android:layout_marginBottom="316dp"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="User"
+        android:hint="Usuario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:layout_marginTop="41dp"
         android:layout_marginEnd="163dp"
         android:layout_marginBottom="60dp"
-        android:text="Already have an account? Sign in here"
+        android:text="Tienes una cuenta? Ingresa desde aqui"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="149dp"
         android:layout_marginBottom="36dp"
-        android:text="Sign Up"
+        android:text="Registrarse"
         app:layout_constraintBottom_toTopOf="@+id/SignInHere"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
